@@ -1,0 +1,262 @@
+// #### Text
+
+// - Pale Violet (sub-heading at the top of the app UI): hsl(276, 100%, 81%)
+// - Moderate Violet (chat on the left): hsl(276, 55%, 52%)
+// - Desaturated Dark Violet (chat on the right): hsl(271, 15%, 43%)
+// - Grayish Blue (placeholder text): hsl(206, 6%, 79%)
+// - Very Dark Desaturated Violet (main heading): hsl(271, 36%, 24%)
+// - Dark Grayish Violet (paragraph): hsl(270, 7%, 64%)
+
+// #### Gradients
+
+// These two colors are the vibrant background colors you see throughout the design and are applied as a linear gradient:
+
+// - Light Magenta: hsl(293, 100%, 63%)
+// - Light Violet: hsl(264, 100%, 61%)
+
+// ### Secondary
+
+// - White: hsl(0, 0%, 100%)
+// - Light Grayish Violet (app background): hsl(270, 20%, 96%)
+// - Very Dark Desaturated Violet (submit button background): hsl(271, 36%, 24%)
+// - Very Light Magenta (radio button outline): hsl(289, 100%, 72%)
+
+:root {
+  --ffmain: "Montserrat", sans-serif;
+  --colorbgwhite: hsl(0, 0%, 100%);
+  --colorbg1: hsl(293, 100%, 63%);
+  --colorbg2: hsl(264, 100%, 61%);
+  --colortxtgray: hsl(270, 7%, 64%);
+  --padding: 1em;
+  --margin: 1em;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ffmain);
+  font-size: 16px;
+}
+
+.containerbg {
+  background-color: var(--colorbgwhite);
+  z-index: -1;
+
+  .leftvioletbg {
+    background: linear-gradient(
+      to bottom,
+      hsl(293, 100%, 63%),
+      hsl(264, 100%, 61%)
+    );
+    width: 30%;
+    height: 90vh;
+    border-bottom-right-radius: 20rem;
+    border-bottom-left-radius: 20rem;
+
+    position: absolute;
+    top: 0;
+    left: -4rem;
+  }
+}
+
+.maincontainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 5em;
+  margin-left: 7em;
+}
+.iphonecontainer {
+  //   background: hsl(0, 0%, 100%);
+  background-color: white;
+  z-index: 1;
+  width: 300px;
+  height: 670px;
+  padding: var(--padding);
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+  margin-top: 2em;
+  box-shadow: 5px 5px 5px hsl(264, 3%, 62%);
+}
+
+div.iphonecontainer::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -20.5em;
+  background-color: var(--colorbgwhite);
+  height: 300px;
+  width: 50%;
+  margin: 0 auto;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.iphonecontainer {
+  font-size: 0.8em;
+
+  .topheader {
+    z-index: -2;
+    background: linear-gradient(
+      to left,
+      hsl(293, 100%, 63%),
+      hsl(264, 100%, 61%)
+    );
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    border-top-right-radius: 2rem;
+    border-top-left-radius: 2rem;
+
+    height: 80px;
+    width: 270px;
+    position: relative;
+    box-shadow: 0px 2px 5px hsl(264, 3%, 62%);
+  }
+
+  .headeritems {
+    text-align: center;
+    width: 100px;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5em;
+    position: absolute;
+    right: 5.5rem;
+    bottom: 1rem;
+  }
+  h2 {
+    font-size: 0.8em;
+    color: var(--colorbgwhite);
+    margin-bottom: 0.3rem;
+  }
+  p {
+    color: white;
+    opacity: 0.7;
+    font-size: 0.7em;
+    font-weight: bold;
+    position: relative;
+  }
+  .headeritems img {
+    border-radius: 50%;
+    max-width: 30px;
+    position: absolute;
+    max-height: 30px;
+    background: no-repeat;
+    display: flex;
+    left: -1.5rem;
+    bottom: 0rem;
+    border: 2px solid white;
+  }
+}
+
+.heading {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: var(--padding);
+  padding-top: 0;
+
+  h1 {
+    text-align: left;
+    margin: 2em 0.5em 0.5em 0.5em;
+    color: hsl(271, 36%, 24%);
+    font-weight: light;
+    font-size: 1.9em;
+    opacity: 0.95;
+  }
+  p {
+    text-align: left;
+
+    letter-spacing: 2px;
+    color: var(--colortxtgray);
+    line-height: 1.6em;
+  }
+}
+
+.commentblob {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 1rem auto 0.3rem 0;
+  text-align: left;
+  background: hsl(288, 100%, 94%);
+  border-radius: 0.5rem;
+  width: 150px;
+  height: 45px;
+}
+
+.comment1,
+.comment2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 1rem auto 0.3rem 0;
+  text-align: left;
+  background: hsl(288, 100%, 94%);
+  border-radius: 0.5rem;
+  width: 150px;
+  height: 45px;
+
+  p {
+    color: hsl(276, 55%, 52%);
+    margin-top: 1.5em;
+    margin-left: 1em;
+    font-size: 0.5rem;
+  }
+}
+
+#pictures {
+  display: flex;
+  flex-direction: row;
+  max-height: 50px;
+  max-width: 50px;
+  margin-top: 1rem;
+  margin-right: 1rem;
+
+  img {
+    border-radius: 1rem;
+    margin-left: 0.5rem;
+  }
+}
+
+.commentcontainer {
+  margin-left: auto;
+}
+.midcomment1,
+.midcomment2 {
+  background: white;
+  box-shadow: 0px 2px 5px hsl(264, 3%, 62%);
+  display: flex;
+
+  p {
+    color: black;
+    margin-top: 2em;
+    margin-left: 1em;
+    opacity: 0.9;
+    font-size: 0.5rem;
+  }
+}
+
+.commentbottom {
+
+    width: 180px;
+    height: 55px;
+
+}

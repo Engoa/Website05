@@ -1,0 +1,300 @@
+:root {
+  --ffmain: "Montserrat", sans-serif;
+  --colorbgwhite: hsl(0, 0%, 100%);
+  --colorbg1: hsl(293, 100%, 63%);
+  --colorbg2: hsl(264, 100%, 61%);
+  --colortxtgray: hsl(270, 7%, 64%);
+  --padding: 1em;
+  --margin: 1em;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ffmain);
+  font-size: 16px;
+}
+
+.containerbg {
+  background-color: var(--colorbgwhite);
+  z-index: -1;
+}
+
+.containerbg .leftvioletbg {
+  background: -webkit-gradient(linear, left top, left bottom, from(#e942ff), to(#8838ff));
+  background: linear-gradient(to bottom, #e942ff, #8838ff);
+  width: 30%;
+  height: 90vh;
+  border-bottom-right-radius: 20rem;
+  border-bottom-left-radius: 20rem;
+  position: absolute;
+  top: 0;
+  left: -4rem;
+}
+
+.maincontainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-top: 5em;
+  margin-left: 7em;
+}
+
+.iphonecontainer {
+  background-color: white;
+  z-index: 1;
+  width: 300px;
+  height: 670px;
+  padding: var(--padding);
+  border-radius: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  margin-top: 2em;
+  -webkit-box-shadow: 5px 5px 5px #9e9ba1;
+          box-shadow: 5px 5px 5px #9e9ba1;
+}
+
+div.iphonecontainer::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -20.5em;
+  background-color: var(--colorbgwhite);
+  height: 300px;
+  width: 50%;
+  margin: 0 auto;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.iphonecontainer {
+  font-size: 0.8em;
+}
+
+.iphonecontainer .topheader {
+  z-index: -2;
+  background: -webkit-gradient(linear, right top, left top, from(#e942ff), to(#8838ff));
+  background: linear-gradient(to left, #e942ff, #8838ff);
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  border-top-right-radius: 2rem;
+  border-top-left-radius: 2rem;
+  height: 80px;
+  width: 270px;
+  position: relative;
+  -webkit-box-shadow: 0px 2px 5px #9e9ba1;
+          box-shadow: 0px 2px 5px #9e9ba1;
+}
+
+.iphonecontainer .headeritems {
+  text-align: center;
+  width: 100px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 5em;
+  position: absolute;
+  right: 5.5rem;
+  bottom: 1rem;
+}
+
+.iphonecontainer h2 {
+  font-size: 0.8em;
+  color: var(--colorbgwhite);
+  margin-bottom: 0.3rem;
+}
+
+.iphonecontainer p {
+  color: white;
+  opacity: 0.7;
+  font-size: 0.7em;
+  font-weight: bold;
+  position: relative;
+}
+
+.iphonecontainer .headeritems img {
+  border-radius: 50%;
+  max-width: 30px;
+  position: absolute;
+  max-height: 30px;
+  background: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  left: -1.5rem;
+  bottom: 0rem;
+  border: 2px solid white;
+}
+
+.heading {
+  max-width: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: var(--padding);
+  padding-top: 0;
+}
+
+.heading h1 {
+  text-align: left;
+  margin: 2em 0.5em 0.5em 0.5em;
+  color: #3e2753;
+  font-weight: light;
+  font-size: 1.9em;
+  opacity: 0.95;
+}
+
+.heading p {
+  text-align: left;
+  letter-spacing: 2px;
+  color: var(--colortxtgray);
+  line-height: 1.6em;
+}
+
+.commentblob {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 1rem auto 0.3rem 0;
+  text-align: left;
+  background: #f9e0ff;
+  border-radius: 0.5rem;
+  width: 150px;
+  height: 45px;
+}
+
+.comment1,
+.comment2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 1rem auto 0.3rem 0;
+  text-align: left;
+  background: #f9e0ff;
+  border-radius: 0.5rem;
+  width: 150px;
+  height: 45px;
+}
+
+.comment1 p,
+.comment2 p {
+  color: #9241c8;
+  margin-top: 1.5em;
+  margin-left: 1em;
+  font-size: 0.5rem;
+}
+
+#pictures {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  max-height: 50px;
+  max-width: 50px;
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+
+#pictures img {
+  border-radius: 1rem;
+  margin-left: 0.5rem;
+}
+
+.commentcontainer {
+  margin-left: auto;
+}
+
+.midcomment1,
+.midcomment2 {
+  background: white;
+  -webkit-box-shadow: 0px 2px 5px #9e9ba1;
+          box-shadow: 0px 2px 5px #9e9ba1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.midcomment1 p,
+.midcomment2 p {
+  color: black;
+  margin-top: 2em;
+  margin-left: 1em;
+  opacity: 0.9;
+  font-size: 0.5rem;
+}
+
+.commentbottom {
+  width: 180px;
+  height: 55px;
+}
+/*# sourceMappingURL=main.css.map */
