@@ -30,7 +30,7 @@ body {
 .containerbg .leftvioletbg {
   background: -webkit-gradient(linear, left top, left bottom, from(#e942ff), to(#8838ff));
   background: linear-gradient(to bottom, #e942ff, #8838ff);
-  width: 30%;
+  width: 25%;
   height: 90vh;
   border-bottom-right-radius: 20rem;
   border-bottom-left-radius: 20rem;
@@ -81,8 +81,8 @@ body {
           align-items: center;
   position: relative;
   margin-top: 2em;
-  -webkit-box-shadow: 5px 5px 5px #9e9ba1;
-          box-shadow: 5px 5px 5px #9e9ba1;
+  -webkit-box-shadow: 5px 5px 5px #a9a7a9;
+          box-shadow: 5px 5px 5px #a9a7a9;
 }
 
 div.iphonecontainer::before {
@@ -100,6 +100,8 @@ div.iphonecontainer::before {
 
 .iphonecontainer {
   font-size: 0.8em;
+  margin-right: auto;
+  margin-left: 9rem;
 }
 
 .iphonecontainer .topheader {
@@ -168,18 +170,16 @@ div.iphonecontainer::before {
 }
 
 .heading {
-  max-width: 500px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: var(--padding);
-  padding-top: 0;
+  z-index: 1;
+  max-width: 600px;
+  position: absolute;
+  top: 15rem;
+  right: 15rem;
 }
 
 .heading h1 {
@@ -187,14 +187,15 @@ div.iphonecontainer::before {
   margin: 2em 0.5em 0.5em 0.5em;
   color: #3e2753;
   font-weight: light;
-  font-size: 1.9em;
+  font-size: 2.7;
   opacity: 0.95;
 }
 
 .heading p {
   text-align: left;
-  letter-spacing: 2px;
+  font-size: 1.2rem;
   color: var(--colortxtgray);
+  letter-spacing: 2px;
   line-height: 1.6em;
 }
 
@@ -293,8 +294,171 @@ div.iphonecontainer::before {
   font-size: 0.5rem;
 }
 
+.midcomment2 {
+  width: 75px;
+  height: 45px;
+  margin-left: 4.5rem;
+}
+
 .commentbottom {
-  width: 180px;
+  width: 140px;
   height: 55px;
+}
+
+.paycontainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-right: auto;
+  margin-bottom: auto;
+}
+
+.pay1,
+.pay2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: auto;
+  background: -webkit-gradient(linear, right top, left top, from(#e942ff), to(#8838ff));
+  background: linear-gradient(to left, #e942ff, #8838ff);
+  padding: 0.7rem 2rem 0.7rem 2rem;
+  border-radius: 0.5rem;
+  width: 170px;
+  height: 40px;
+  margin-top: 0.5rem;
+  position: relative;
+}
+
+.pay2::before {
+  content: "";
+  position: absolute;
+  -webkit-box-shadow: 1px 1px 2.5px #8b8787;
+          box-shadow: 1px 1px 2.5px #8b8787;
+  left: -0.82rem;
+  right: 0;
+  bottom: -1rem;
+  width: 300px;
+  height: 1px;
+}
+
+input {
+  margin-top: 2rem;
+  margin-left: 1.5rem;
+  outline: none;
+  border: none;
+  width: 200px;
+  position: relative;
+}
+
+input::-webkit-input-placeholder {
+  font-family: var(--ffmain);
+  font-size: 0.6rem;
+  color: #5a6368;
+}
+
+input:-ms-input-placeholder {
+  font-family: var(--ffmain);
+  font-size: 0.6rem;
+  color: #5a6368;
+}
+
+input::-ms-input-placeholder {
+  font-family: var(--ffmain);
+  font-size: 0.6rem;
+  color: #5a6368;
+}
+
+input::placeholder {
+  font-family: var(--ffmain);
+  font-size: 0.6rem;
+  color: #5a6368;
+}
+
+#arrowbackground {
+  background-color: #e570ff;
+}
+
+#arrowbackground button {
+  position: absolute;
+  right: 1.2rem;
+  bottom: 1.3rem;
+  height: 25px;
+  width: 25px;
+  border: none;
+  outline: 1px solid white;
+  border-radius: 50%;
+  background-color: #3e2753;
+  color: white;
+  font-size: 0.7rem;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-transition: outline-offset 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
+  transition: outline-offset 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out, outline-offset 200ms ease-in-out;
+  transition: transform 200ms ease-in-out, outline-offset 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
+}
+
+button:hover,
+button:focus {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  outline-offset: -3px;
+}
+
+@media only screen and (max-width: 1400px) {
+  .heading {
+    max-width: 500px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0;
+    margin: 0 auto;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding-bottom: 5rem;
+    position: static;
+  }
+  .heading h1 {
+    text-align: center;
+    font-size: 2rem;
+  }
+  .heading p {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  .containerbg .leftvioletbg {
+    left: -3.5rem;
+    width: 380px;
+    height: 90vh;
+    top: 0;
+  }
+  .iphonecontainer {
+    font-size: 0.8em;
+    margin-right: 16rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .containerbg .leftvioletbg {
+    left: -1.5rem;
+    width: 270px;
+    height: 90vh;
+    top: 0;
+  }
 }
 /*# sourceMappingURL=main.css.map */
