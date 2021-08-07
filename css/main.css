@@ -89,9 +89,9 @@ div.iphonecontainer::before {
   content: '';
   position: absolute;
   z-index: -1;
-  top: -20.5em;
+  top: 0.5rem;
   background-color: var(--colorbgwhite);
-  height: 300px;
+  height: 25px;
   width: 50%;
   margin: 0 auto;
   border-bottom-left-radius: 1rem;
