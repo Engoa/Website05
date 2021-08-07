@@ -84,9 +84,11 @@ p {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  margin-top: 2em;
   -webkit-box-shadow: 5px 5px 5px #a9a7a9;
           box-shadow: 5px 5px 5px #a9a7a9;
+  font-size: 0.8em;
+  margin-right: auto;
+  margin-left: 6rem;
 }
 
 div.iphonecontainer::before {
@@ -100,12 +102,6 @@ div.iphonecontainer::before {
   margin: 0 auto;
   border-bottom-left-radius: 0.8rem;
   border-bottom-right-radius: 0.8rem;
-}
-
-.iphonecontainer {
-  font-size: 0.8em;
-  margin-right: auto;
-  margin-left: 9rem;
 }
 
 .iphonecontainer .topheader {
@@ -514,7 +510,7 @@ button:focus {
           transform: translateY(-6px);
 }
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 1360px) {
   .heading {
     max-width: 500px;
     display: -webkit-box;
