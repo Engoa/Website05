@@ -189,13 +189,13 @@ div.iphonecontainer::before {
   font-weight: light;
   font-size: 4rem;
   opacity: 0.95;
-  background: -webkit-gradient(linear, left top, right top, from(#a62e8a), color-stop(50%, #9B55A6), to(#82fbff));
-  background: linear-gradient(to right, #a62e8a 0%, #9B55A6 50%, #82fbff 100%);
+  background: -webkit-gradient(linear, right top, left top, color-stop(40%, #a62e8a), to(#82fbff));
+  background: linear-gradient(to left, #a62e8a 40%, #82fbff 100%);
   -webkit-text-fill-color: transparent;
   background-clip: text;
   background-size: 100%;
-  -webkit-animation: header-bg 5s infinite alternate linear;
-          animation: header-bg 5s infinite alternate linear;
+  -webkit-animation: header-bg 7s infinite alternate ease-in;
+          animation: header-bg 7s infinite alternate ease-in;
 }
 
 .heading p {
@@ -211,10 +211,10 @@ div.iphonecontainer::before {
     background-size: 100%;
   }
   50% {
-    background-size: 200%;
+    background-size: 150%;
   }
   100% {
-    background-size: 300%;
+    background-size: 200%;
   }
 }
 
@@ -223,10 +223,10 @@ div.iphonecontainer::before {
     background-size: 100%;
   }
   50% {
-    background-size: 200%;
+    background-size: 150%;
   }
   100% {
-    background-size: 300%;
+    background-size: 200%;
   }
 }
 
