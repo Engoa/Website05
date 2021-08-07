@@ -168,18 +168,35 @@ div.iphonecontainer::before {
 
    h1 {
       text-align: left;
-      margin: 2em 0.5em 0.5em 0.5em;
-      color: hsl(271, 36%, 24%);
+      margin-top: 2rem;
+      margin-bottom: 0.5rem;
       font-weight: light;
-      font-size: 2.7;
+      font-size: 4rem;
       opacity: 0.95;
+      background: linear-gradient(to right, #a62e8a 0%, #9B55A6 50%, #82fbff 100%);
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      background-size: 100%;
+      animation: header-bg 5s infinite alternate linear;
    }
    p {
       text-align: left;
       font-size: 1.2rem;
       color: var(--colortxtgray);
-      letter-spacing: 2px;
+      letter-spacing: 1px;
       line-height: 1.6em;
+   }
+}
+
+@keyframes header-bg {
+   0% {
+      background-size: 100%;
+   }
+   50% {
+      background-size: 200%;
+   }
+   100% {
+      background-size: 300%;
    }
 }
 
