@@ -299,6 +299,8 @@ div.iphonecontainer::before {
   border-radius: 0.5rem;
   width: 150px;
   height: 45px;
+  -webkit-box-shadow: 0px 2px 5px #9e9ba1;
+          box-shadow: 0px 2px 5px #9e9ba1;
 }
 
 .comment1 p,
@@ -328,6 +330,8 @@ div.iphonecontainer::before {
   max-width: 50px;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-box-shadow: 0px 2px 5px #9e9ba1;
+          box-shadow: 0px 2px 5px #9e9ba1;
 }
 
 .commentcontainer {
@@ -390,6 +394,8 @@ div.iphonecontainer::before {
   height: 40px;
   margin-top: 0.5rem;
   position: relative;
+  -webkit-box-shadow: 0px 2px 5px #9e9ba1;
+          box-shadow: 0px 2px 5px #9e9ba1;
 }
 
 .pay1 p,
@@ -436,7 +442,7 @@ div.iphonecontainer::before {
 
 input {
   margin-top: 3rem;
-  margin-left: 1rem;
+  margin-left: 2rem;
   outline: none;
   width: 210px;
   height: 40px;
@@ -445,26 +451,38 @@ input {
 
 input::-webkit-input-placeholder {
   font-family: var(--ffmain);
-  font-size: 0.6rem;
+  font-size: 0.62rem;
   color: #5a6368;
+  font-weight: bold;
+  text-transform: lowercase;
+  opacity: 0.6;
 }
 
 input:-ms-input-placeholder {
   font-family: var(--ffmain);
-  font-size: 0.6rem;
+  font-size: 0.62rem;
   color: #5a6368;
+  font-weight: bold;
+  text-transform: lowercase;
+  opacity: 0.6;
 }
 
 input::-ms-input-placeholder {
   font-family: var(--ffmain);
-  font-size: 0.6rem;
+  font-size: 0.62rem;
   color: #5a6368;
+  font-weight: bold;
+  text-transform: lowercase;
+  opacity: 0.6;
 }
 
 input::placeholder {
   font-family: var(--ffmain);
-  font-size: 0.6rem;
+  font-size: 0.62rem;
   color: #5a6368;
+  font-weight: bold;
+  text-transform: lowercase;
+  opacity: 0.6;
 }
 
 #arrowbackground {
@@ -497,6 +515,38 @@ button:focus {
 }
 
 @media only screen and (max-width: 1400px) {
+  .heading {
+    max-width: 500px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 2rem;
+    margin: 0 auto;
+    padding-bottom: 5rem;
+    position: static;
+  }
+  .heading h1 {
+    text-align: center;
+    font-size: 2.8rem;
+  }
+  .heading p {
+    font-size: 1.2rem;
+    text-align: center;
+    letter-spacing: 0.1px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
   .heading {
     max-width: 500px;
     display: -webkit-box;
