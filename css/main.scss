@@ -120,6 +120,38 @@ div.iphonecontainer::before {
       box-shadow: 0px 2px 5px hsl(264, 3%, 62%);
    }
 
+   .topheader::before {
+      content: '\f053';
+      font-family: 'Font Awesome 5 Free';
+      color: white;
+      font-size: 0.8rem;
+      font-weight: bold;
+      cursor: pointer;
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      left: 1.3rem;
+      top: 53%;
+      transition: transform 250ms ease;
+   }
+   .topheader:hover::before {
+      transform: translateX(-4px);
+   }
+
+   .topheader::after {
+      content: '\f142';
+      font-family: 'Font Awesome 5 Free';
+      color: white;
+      font-size: 0.8rem;
+      font-weight: bold;
+      cursor: pointer;
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      right: 1.3rem;
+      top: 53%;
+   }
+
    .headeritems {
       text-align: center;
       width: 100px;
@@ -172,20 +204,26 @@ div.iphonecontainer::before {
       margin-bottom: 0.5rem;
       font-weight: light;
       font-size: 4rem;
-      opacity: 0.95;
-      background-image: linear-gradient(to left, #a62e8a 40%, #8cc9e6 90%);
-      background-size: 100%;
+      background-image: linear-gradient(45deg, #a62e8a, #8cc9e6 40%);
       background-clip: text;
       -webkit-background-clip: text;
       color: transparent;
-      animation: header-bg 5s infinite alternate ease;
+      animation: header-bg 5s infinite alternate linear;
    }
    p {
       text-align: left;
       font-size: 1.2rem;
       color: var(--colortxtgray);
-      letter-spacing: 1px;
-      line-height: 1.6em;
+      letter-spacing: 0.7px;
+      line-height: 1.65em;
+   }
+
+   span {
+      background-image: linear-gradient(45deg, #a62e8a, #8cc9e6 60%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      animation: header-bg 5s infinite alternate linear;
    }
 }
 
@@ -216,16 +254,6 @@ div.iphonecontainer::before {
 
 .comment1,
 .comment2 {
-   display: flex;
-   flex-direction: column;
-   justify-content: flex-start;
-   align-items: flex-start;
-   margin: 1rem auto 0.3rem 0;
-   text-align: left;
-   background: hsl(288, 100%, 94%);
-   border-radius: 0.5rem;
-   width: 150px;
-   height: 45px;
 
    p {
       color: hsl(276, 55%, 52%);
@@ -241,12 +269,12 @@ div.iphonecontainer::before {
    max-height: 50px;
    max-width: 50px;
    margin-top: 1rem;
-   margin-right: 1rem;
 
    img {
       border-radius: 1rem;
-      margin-left: 0.5rem;
+      margin-left: 0.3rem;
       max-width: 50px;
+      object-fit: cover;
    }
 }
 
@@ -344,7 +372,6 @@ input {
    width: 210px;
    height: 40px;
    border: none;
-   position: relative;
 }
 input::placeholder {
    font-family: var(--ffmain);
@@ -359,25 +386,22 @@ input::placeholder {
       position: absolute;
       right: 1.2rem;
       bottom: 1.3rem;
-      height: 30px;
-      width: 30px;
+      height: 25px;
+      width: 25px;
       border: none;
-      outline: 1px solid white;
       border-radius: 50%;
       background-color: hsl(271, 36%, 24%);
       color: white;
       font-size: 0.7rem;
       text-align: center;
-      font-weight: bold;
       cursor: pointer;
-      transition: transform 200ms ease-in-out, outline-offset 200ms ease-in-out;
+      transition: transform 250ms ease-in-out;
    }
 }
 
 button:hover,
 button:focus {
-   transform: translateY(-10px);
-   outline-offset: -3px;
+   transform: translateY(-6px);
 }
 
 @media only screen and (max-width: 1400px) {
