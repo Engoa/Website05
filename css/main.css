@@ -158,13 +158,14 @@ div.iphonecontainer::before {
 
 .iphonecontainer .headeritems {
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 100px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -197,12 +198,13 @@ div.iphonecontainer::before {
   max-width: 30px;
   position: absolute;
   max-height: 30px;
-  background: no-repeat;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   left: -1.5rem;
   bottom: 0rem;
+  -o-object-fit: cover;
+     object-fit: cover;
   border: 2px solid white;
 }
 
