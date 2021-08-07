@@ -22,6 +22,10 @@ body {
   font-size: 16px;
 }
 
+p {
+  line-height: 0.7rem;
+}
+
 .containerbg {
   background-color: var(--colorbgwhite);
   z-index: -1;
@@ -94,8 +98,8 @@ div.iphonecontainer::before {
   height: 25.1px;
   width: 50%;
   margin: 0 auto;
-  border-bottom-left-radius: 1rem;
-  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 0.8rem;
+  border-bottom-right-radius: 0.8rem;
 }
 
 .iphonecontainer {
@@ -146,7 +150,7 @@ div.iphonecontainer::before {
   content: '\f142';
   font-family: 'Font Awesome 5 Free';
   color: white;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: bold;
   cursor: pointer;
   position: absolute;
@@ -180,31 +184,31 @@ div.iphonecontainer::before {
 }
 
 .iphonecontainer h2 {
-  font-size: 0.8em;
+  font-size: 0.9em;
   color: var(--colorbgwhite);
   margin-bottom: 0.3rem;
 }
 
 .iphonecontainer p {
   color: white;
-  opacity: 0.7;
-  font-size: 0.7em;
+  opacity: 0.75;
+  font-size: 0.6em;
   font-weight: bold;
   position: relative;
 }
 
 .iphonecontainer .headeritems img {
   border-radius: 50%;
-  max-width: 30%;
+  max-width: 35%;
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  left: -1.8rem;
-  bottom: -0.2rem;
+  left: -2rem;
+  bottom: -0.1rem;
   -o-object-fit: cover;
      object-fit: cover;
-  border: 2px solid white;
+  border: 2px solid #ebe3e3;
 }
 
 .heading {
@@ -345,7 +349,7 @@ div.iphonecontainer::before {
   color: black;
   margin-top: 2em;
   margin-left: 1em;
-  opacity: 0.6;
+  opacity: 0.8;
   font-size: 0.5rem;
 }
 
@@ -388,14 +392,14 @@ div.iphonecontainer::before {
   position: relative;
 }
 
-.paycontainer span {
-  color: white;
-  font-weight: bolder;
-  margin-left: 4rem;
+.pay1 p,
+.pay2 p {
+  font-size: 0.65rem;
+  margin-top: 0.2rem;
 }
 
 .pay1::after {
-  content: '29$';
+  content: '-  29$';
   position: absolute;
   right: 0.8rem;
   top: 0.8rem;
@@ -403,10 +407,11 @@ div.iphonecontainer::before {
   font-family: var(--ffmain);
   color: white;
   font-size: 0.9rem;
+  opacity: 0.85;
 }
 
 .pay2::after {
-  content: '50$';
+  content: '-  50$';
   position: absolute;
   right: 0.8rem;
   top: 0.8rem;
@@ -414,6 +419,7 @@ div.iphonecontainer::before {
   font-family: var(--ffmain);
   color: white;
   font-size: 0.9rem;
+  opacity: 0.85;
 }
 
 .pay2::before {
