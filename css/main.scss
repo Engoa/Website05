@@ -173,12 +173,12 @@ div.iphonecontainer::before {
       font-weight: light;
       font-size: 4rem;
       opacity: 0.95;
-      background-image: linear-gradient(to left, #a62e8a 60%, #8cc9e6 70%);
+      background-image: linear-gradient(to left, #a62e8a 40%, #8cc9e6 90%);
       background-size: 100%;
       background-clip: text;
       -webkit-background-clip: text;
       color: transparent;
-      animation: header-bg 4.5s infinite alternate ease-in;
+      animation: header-bg 5s infinite alternate ease;
    }
    p {
       text-align: left;
@@ -191,13 +191,13 @@ div.iphonecontainer::before {
 
 @keyframes header-bg {
    0% {
-      background-size: 200%;
+      background-size: 100%;
    }
    50% {
-      background-size: 150%;
+      background-size: 200%;
    }
    100% {
-      background-size: 200%;
+      background-size: 300%;
    }
 }
 
