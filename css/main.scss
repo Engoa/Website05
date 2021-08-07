@@ -179,12 +179,11 @@ div.iphonecontainer::before {
    }
    .headeritems img {
       border-radius: 50%;
-      max-width: 30px;
+      max-width: 30%;
       position: absolute;
-      max-height: 30px;
       display: flex;
-      left: -1.5rem;
-      bottom: 0rem;
+      left: -1.8rem;
+      bottom: -0.2rem;
       object-fit: cover;
       border: 2px solid white;
    }
